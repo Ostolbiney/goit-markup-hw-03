@@ -149,6 +149,9 @@ img {
 
 /**-------section2------**/
 
+.visually-hidden {
+  margin-bottom: 8px;
+}
 .features {
   background-color: #ffffff;
   padding-top: 120px;
@@ -197,7 +200,7 @@ img {
   text-transform: capitalize;
   padding-bottom: 72px;
   margin: 0 auto;
-  margin-bottom: 8px;
+  margin-bottom: 72px;
 }
 .team-list {
   display: flex;
