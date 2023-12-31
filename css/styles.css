@@ -7,21 +7,32 @@ a {
   text-decoration: none;
 }
 ul,
-ol {
+ol,
+h1 {
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-.visually-hidden,
-.visually-hidden-focusable:not(:focus):not(:focus-within) {
-  border: 0 !important;
-  clip: rect(0, 0, 0, 0) !important;
-  margin: -1px !important;
-  overflow: hidden !important;
-  white-space: nowrap !important;
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 /**-------header------**/
 
+.header-nav {
+  display: flex;
+  align-items: center;
+}
 .logo {
   color: #4d5ae5;
   font-family: Raleway, sans-serif;
@@ -31,10 +42,28 @@ ol {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   cursor: pointer;
+  margin-right: 76px;
+}
+.header-container {
+  display: flex;
+  align-items: center;
+}
+.container {
+  width: 1158px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+.header {
+  border-bottom: 1px solid #e7e9fc;
 }
 .logo-part {
   color: #2e2f42;
 }
+.header-link {
+  display: flex;
+  gap: 40%;
+}
+
 .nav-link {
   color: #2e2f42;
   font-size: 16px;
@@ -42,6 +71,8 @@ ol {
   line-height: 1.5;
   letter-spacing: 0.02em;
   cursor: pointer;
+  padding: 24px 0;
+  display: block;
 }
 .nav-link:hover,
 .nav-link:focus {
@@ -49,6 +80,11 @@ ol {
 }
 .address {
   font-style: normal;
+  margin-left: auto;
+}
+.address-list {
+  display: flex;
+  gap: 40px;
 }
 .address-link {
   color: #434455;
@@ -64,8 +100,13 @@ ol {
 
 /**-------hero------**/
 
+.container {
+}
 .hero {
   background: #2e2f42;
+  margin: 0 auto;
+  padding-top: 188px;
+  padding-bottom: 188px;
 }
 
 .hero-title {
@@ -75,8 +116,10 @@ ol {
   font-weight: 700;
   line-height: 1.07;
   letter-spacing: 0.02em;
+  width: 496px;
+  margin: 0 auto;
+  padding-bottom: 48px;
 }
-
 .hero-btn {
   color: #fff;
   font-family: Roboto, sans-serif;
@@ -86,18 +129,27 @@ ol {
   letter-spacing: 0.04em;
   cursor: pointer;
   background-color: #4d5ae5;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  margin: 0 auto;
+  display: block;
+  height: 56px;
+  border: none;
+  border-radius: 4px;
 }
 .hero-btn:hover,
 .hero-btn:focus {
   background-color: #404bbf;
 }
 
-/**-------features------**/
+/**-------section1------**/
 
 .features {
   background-color: #ffffff;
+  padding-top: 120px;
+  padding-bottom: 120px;
 }
 .features-list {
+  display: flex;
 }
 .features-item {
 }
@@ -107,6 +159,8 @@ ol {
   font-weight: 500;
   line-height: 1.2;
   letter-spacing: 0.02em;
+  margin-bottom: 8px;
+  margin: 24px;
 }
 .features-item-text {
   color: #434455;
@@ -114,12 +168,16 @@ ol {
   font-weight: 400;
   line-height: 1.5;
   letter-spacing: 0.02em;
+  margin: 24px;
+  margin-top: 8px;
 }
 
-/**-------team------**/
+/**-------section2------**/
 
 .team {
   background: #f4f4fd;
+  padding-top: 120px;
+  padding-bottom: 120px;
 }
 .team-title {
   color: #2e2f42;
@@ -129,8 +187,13 @@ ol {
   line-height: 1.11;
   letter-spacing: 0.02em;
   text-transform: capitalize;
+  padding-bottom: 72px;
+  margin: 0 auto;
 }
 .team-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 .team-item {
   background-color: #ffffff;
@@ -150,14 +213,29 @@ ol {
   font-weight: 400;
   line-height: 1.5;
   letter-spacing: 0.02em;
+  margin: 0 auto;
 }
 
-/**-------portfolio------**/
+/**-------section3------**/
 
 .portfolio {
   background-color: #ffffff;
+  padding-top: 120px;
+}
+.portfolio-title {
+  color: #2e2f42;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
 }
 .portfolio-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 .portfolio-item {
 }
@@ -180,6 +258,9 @@ ol {
 
 .footer {
   background: #2e2f42;
+  margin: 0 auto;
+  padding-top: 100px;
+  display: flex;
 }
 .footer-logo {
   color: #4d5ae5;
@@ -200,4 +281,6 @@ ol {
   font-weight: 400;
   line-height: 1.5;
   letter-spacing: 0.02em;
+  padding-bottom: 100px;
+  width: 264px;
 }
