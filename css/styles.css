@@ -197,7 +197,7 @@ img {
   text-transform: capitalize;
   padding-bottom: 72px;
   margin: 0 auto;
-  margin-bottom: 72px;
+  margin-bottom: 8px;
 }
 .team-list {
   display: flex;
